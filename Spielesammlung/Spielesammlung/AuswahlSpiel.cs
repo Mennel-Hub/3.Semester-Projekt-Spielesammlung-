@@ -94,5 +94,12 @@ namespace Spielesammlung
                 return 1;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CrossGame CG = new CrossGame();
+            CG.ShowDialog();   //Macht die Form sichtbar
+            this.Show();
+        }
     }
 }
