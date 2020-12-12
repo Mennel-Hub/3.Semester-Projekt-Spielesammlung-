@@ -10,33 +10,39 @@ using System.Windows.Forms;
 
 namespace Spielesammlung
 {
-    public partial class CrossGame : Form
+    public partial class CrossGame : Form               // CrossGame abgeleitet von der Basis Form
     {
         public CrossGame()
         {
-            InitializeComponent();
+            InitializeComponent();       
             End.Visible = false;  // Game over Label zu beginn unsichtbar
             Winning.Visible = false;  // Win Label zu beginn unsichtbar 
-            labelRetry.Visible = false;
-            Save1.Visible = true;
-            GameReset();
+            labelRetry.Visible = false;    //Retry Label zu beginn unsichtbar 
+            Save1.Visible = true;        
+            GameReset();          //Methode des GameReset immer vorhanden damit jederzeit resetet werden kann 
         }
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
+       
         void Sieg()
         {
-            if (Player.Bounds.IntersectsWith(picBoxSave2.Bounds))
+            
+            if (Player.Bounds.IntersectsWith(Save2.Bounds))
             {
-                timer1.Enabled = false;
-                Winning.Visible = true;
-                Player.Visible = false;
-                End.Visible = false;
-                labelRetry.Visible = true;
+                if (Goldworth <10)
+                {
+                    Winning.Visible = false;
+                }
+                else
+                {
+                            timer1.Enabled = false;
+                            Winning.Visible = true;
+                            Player.Visible = false;
+                            End.Visible = false;
+                            labelRetry.Visible = true;
+                }
+
 
             }
+            
         }
 
         void GameOver()
@@ -161,7 +167,7 @@ namespace Spielesammlung
 
         private void GameReset()
         {
-
+            Goldworth = 1;
             Player.Top = 240;
             Player.Left = 615;
             Points.Text = "score: 0";
@@ -236,56 +242,65 @@ namespace Spielesammlung
             { EnemyR1.Left = 666; }
             else { EnemyR1.Left -= Speed; }
         }
-        int Goldworth = 10;
 
+       
+        
+        int Goldworth = 1;
         void Score()
         {
             if (Player.Bounds.IntersectsWith(Gold1.Bounds))
             {
-                Goldworth++;
+                
                 Gold1.Visible = false;
                 Points.Text = "score: 0" + Goldworth.ToString();
+                Goldworth++;
             }
 
             if (Player.Bounds.IntersectsWith(Gold2.Bounds))
             {
-                Goldworth++;
+
                 Gold2.Visible = false;
                 Points.Text = "score: 0" + Goldworth.ToString();
+                Goldworth++;
             }
 
             if (Player.Bounds.IntersectsWith(Gold3.Bounds))
             {
-                Goldworth++;
+               
                 Gold3.Visible = false;
                 Points.Text = "score: 0" + Goldworth.ToString();
+                Goldworth++;
             }
 
             if (Player.Bounds.IntersectsWith(Gold4.Bounds))
             {
-                Goldworth++;
+               
                 Gold4.Visible = false;
-                Points.Text = "score: 0" + Goldworth.ToString();
+                Points.Text = "score: 0" + Goldworth.ToString(); 
+                Goldworth++;
             }
 
             if (Player.Bounds.IntersectsWith(Gold5.Bounds))
             {
-                Goldworth++;
+                
                 Gold5.Visible = false;
                 Points.Text = "score: 0" + Goldworth.ToString();
+                Goldworth++;
             }
 
             if (Player.Bounds.IntersectsWith(Gold6.Bounds))
             {
-                Goldworth++;
+               
                 Gold6.Visible = false;
                 Points.Text = "score: 0" + Goldworth.ToString();
+                Goldworth++;
             }
             if (Player.Bounds.IntersectsWith(Gold7.Bounds))
             {
-                Goldworth++;
+                
                 Gold7.Visible = false;
                 Points.Text = "score: 0" + Goldworth.ToString();
+                Goldworth++;
             }
         }
 
@@ -312,7 +327,7 @@ int gamespeed = 20;
             }
             if (e.KeyCode == Keys.Right)                 // Tastencode gleich Pfeiltaste Rechts
             {
-                if (Player.Right < 666)
+                if (Player.Right < 656)
                     Player.Left += gamespeed;
             }
 
@@ -335,24 +350,24 @@ int gamespeed = 20;
 
 
 
-                if (End.Visible || Winning.Visible == true)         // Falls  Win oder Gameover eintritt  und Entertaste gedrücktwird mittels Entertaste folgendes vollbracht 
+                if (End.Visible || Winning.Visible == true)  // Falls  Win- oder Gameover-Sequenz eintritt und Entertaste gedrückt wird tritt folgendes ein
 
                 {
 
 
-                    End.Visible = false;                       // falls End sichtbar mit entertaste beendet
-                    Winning.Visible = false;                   // falls winning sichtbar mit entertaste beendet
-                    timer1.Enabled = true;
-                    Player.Visible = true;
-                    labelRetry.Visible = true;
+                    End.Visible = false;                       // Gameover-Sequenz wird unsichtbar
+                    Winning.Visible = false;                   // Gameover-Sequenz wird unsichtbar
+                    timer1.Enabled = true;                     // Timer ist true damit sich Gegner weiter bewegen
+                    Player.Visible = true;                     // Der Player ist Sichtbar 
+                    labelRetry.Visible = true;                 // Retry label ist sichtbar
 
 
 
 
-                    if (e.KeyCode == Keys.Enter)
-                    {
-                        labelRetry.Visible = false;
-                        GameReset();
+                    if (e.KeyCode == Keys.Enter)         //Sofern Spiel gewonnen oder verloren wurde kann mit der Entertaste das Spiel resetet werden.
+                    {                                    //Damit kann das Spiel schneller wieder begonnen werden. Spiel wird flüssiger.
+                        labelRetry.Visible = false;      //Das Label Retry wird nicht mehr sichtbar.
+                        GameReset();                     //Methode um das Spiel zu reseten.
                     }
 
 
@@ -362,5 +377,14 @@ int gamespeed = 20;
             }
         }
 
+        private void spielVerlassenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close(); // Wenn auf der Grafischen Oberfläche im oberen linken Eck auf Spielverlassen geklickt wird soll sich dieses Fenster schließen
+        }
+
+        private void neuesSpielToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GameReset();  // Wenn auf der Grafischen Oberfläche im oberen linken Eck auf neues Spiel geklickt wird soll sich dieses Fenster reseten
+        }
     }
 }

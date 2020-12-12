@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrossGame));
-            this.picBoxSave2 = new System.Windows.Forms.PictureBox();
+            this.Save2 = new System.Windows.Forms.PictureBox();
             this.Save1 = new System.Windows.Forms.PictureBox();
             this.Enemyu1 = new System.Windows.Forms.PictureBox();
             this.Enemyu2 = new System.Windows.Forms.PictureBox();
@@ -74,7 +74,7 @@
             this.überUnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SpaceSpielraum = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSave2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Save2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Save1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemyu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemyu2)).BeginInit();
@@ -104,15 +104,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // picBoxSave2
+            // Save2
             // 
-            this.picBoxSave2.BackColor = System.Drawing.Color.MediumBlue;
-            this.picBoxSave2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxSave2.Location = new System.Drawing.Point(0, 224);
-            this.picBoxSave2.Name = "picBoxSave2";
-            this.picBoxSave2.Size = new System.Drawing.Size(48, 84);
-            this.picBoxSave2.TabIndex = 3;
-            this.picBoxSave2.TabStop = false;
+            this.Save2.BackColor = System.Drawing.Color.MediumBlue;
+            this.Save2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Save2.Location = new System.Drawing.Point(0, 224);
+            this.Save2.Name = "Save2";
+            this.Save2.Size = new System.Drawing.Size(48, 84);
+            this.Save2.TabIndex = 3;
+            this.Save2.TabStop = false;
             // 
             // Save1
             // 
@@ -291,7 +291,7 @@
             this.Winning.BackColor = System.Drawing.Color.Transparent;
             this.Winning.Font = new System.Drawing.Font("Showcard Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Winning.ForeColor = System.Drawing.Color.DarkRed;
-            this.Winning.Location = new System.Drawing.Point(219, 200);
+            this.Winning.Location = new System.Drawing.Point(219, 179);
             this.Winning.Name = "Winning";
             this.Winning.Size = new System.Drawing.Size(245, 119);
             this.Winning.TabIndex = 22;
@@ -412,7 +412,7 @@
             this.labelRetry.AutoSize = true;
             this.labelRetry.BackColor = System.Drawing.Color.DimGray;
             this.labelRetry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRetry.Location = new System.Drawing.Point(267, 277);
+            this.labelRetry.Location = new System.Drawing.Point(278, 298);
             this.labelRetry.Name = "labelRetry";
             this.labelRetry.Size = new System.Drawing.Size(110, 13);
             this.labelRetry.TabIndex = 31;
@@ -458,6 +458,7 @@
             this.neuesSpielToolStripMenuItem.Name = "neuesSpielToolStripMenuItem";
             this.neuesSpielToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.neuesSpielToolStripMenuItem.Text = "Neues Spiel";
+            this.neuesSpielToolStripMenuItem.Click += new System.EventHandler(this.neuesSpielToolStripMenuItem_Click);
             // 
             // spielStatistikZurücksetzenToolStripMenuItem
             // 
@@ -481,6 +482,7 @@
             this.spielVerlassenToolStripMenuItem.Name = "spielVerlassenToolStripMenuItem";
             this.spielVerlassenToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.spielVerlassenToolStripMenuItem.Text = "Spiel verlassen";
+            this.spielVerlassenToolStripMenuItem.Click += new System.EventHandler(this.spielVerlassenToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -493,7 +495,7 @@
             // überUnsToolStripMenuItem
             // 
             this.überUnsToolStripMenuItem.Name = "überUnsToolStripMenuItem";
-            this.überUnsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.überUnsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.überUnsToolStripMenuItem.Text = "Über uns";
             // 
             // SpaceSpielraum
@@ -521,6 +523,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 478);
+            this.Controls.Add(this.Winning);
             this.Controls.Add(this.End);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Points);
@@ -536,7 +539,6 @@
             this.Controls.Add(this.Gold1);
             this.Controls.Add(this.Gold6);
             this.Controls.Add(this.Gold7);
-            this.Controls.Add(this.Winning);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.EnemyR1);
@@ -554,14 +556,16 @@
             this.Controls.Add(this.Enemyu2);
             this.Controls.Add(this.Enemyu1);
             this.Controls.Add(this.Save1);
-            this.Controls.Add(this.picBoxSave2);
+            this.Controls.Add(this.Save2);
             this.Controls.Add(this.SpaceSpielraum);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(666, 517);
+            this.MinimumSize = new System.Drawing.Size(666, 517);
             this.Name = "CrossGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrossGame";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CrossGame_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSave2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Save2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Save1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemyu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemyu2)).EndInit();
@@ -596,7 +600,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox picBoxSave2;
+        private System.Windows.Forms.PictureBox Save2;
         private System.Windows.Forms.PictureBox Save1;
         private System.Windows.Forms.PictureBox Enemyu1;
         private System.Windows.Forms.PictureBox Enemyu2;
