@@ -73,6 +73,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.überUnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SpaceSpielraum = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSave2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Save1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemyu1)).BeginInit();
@@ -100,13 +101,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpaceSpielraum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // picBoxSave2
             // 
             this.picBoxSave2.BackColor = System.Drawing.Color.MediumBlue;
             this.picBoxSave2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxSave2.Location = new System.Drawing.Point(-8, 163);
+            this.picBoxSave2.Location = new System.Drawing.Point(0, 224);
             this.picBoxSave2.Name = "picBoxSave2";
             this.picBoxSave2.Size = new System.Drawing.Size(48, 84);
             this.picBoxSave2.TabIndex = 3;
@@ -116,7 +118,7 @@
             // 
             this.Save1.BackColor = System.Drawing.Color.MediumBlue;
             this.Save1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Save1.Location = new System.Drawing.Point(569, 180);
+            this.Save1.Location = new System.Drawing.Point(604, 225);
             this.Save1.Name = "Save1";
             this.Save1.Size = new System.Drawing.Size(46, 52);
             this.Save1.TabIndex = 4;
@@ -125,7 +127,7 @@
             // Enemyu1
             // 
             this.Enemyu1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyu1.Location = new System.Drawing.Point(497, 258);
+            this.Enemyu1.Location = new System.Drawing.Point(538, 343);
             this.Enemyu1.Name = "Enemyu1";
             this.Enemyu1.Size = new System.Drawing.Size(31, 50);
             this.Enemyu1.TabIndex = 5;
@@ -134,7 +136,7 @@
             // Enemyu2
             // 
             this.Enemyu2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyu2.Location = new System.Drawing.Point(460, 111);
+            this.Enemyu2.Location = new System.Drawing.Point(511, 214);
             this.Enemyu2.Name = "Enemyu2";
             this.Enemyu2.Size = new System.Drawing.Size(31, 50);
             this.Enemyu2.TabIndex = 6;
@@ -143,7 +145,7 @@
             // Enemyu4
             // 
             this.Enemyu4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyu4.Location = new System.Drawing.Point(379, 293);
+            this.Enemyu4.Location = new System.Drawing.Point(394, 343);
             this.Enemyu4.Name = "Enemyu4";
             this.Enemyu4.Size = new System.Drawing.Size(31, 50);
             this.Enemyu4.TabIndex = 7;
@@ -152,7 +154,7 @@
             // Enemyu3
             // 
             this.Enemyu3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyu3.Location = new System.Drawing.Point(394, 137);
+            this.Enemyu3.Location = new System.Drawing.Point(394, 184);
             this.Enemyu3.Name = "Enemyu3";
             this.Enemyu3.Size = new System.Drawing.Size(31, 93);
             this.Enemyu3.TabIndex = 8;
@@ -161,7 +163,7 @@
             // Enemyd1
             // 
             this.Enemyd1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyd1.Location = new System.Drawing.Point(428, 46);
+            this.Enemyd1.Location = new System.Drawing.Point(476, 137);
             this.Enemyd1.Name = "Enemyd1";
             this.Enemyd1.Size = new System.Drawing.Size(31, 28);
             this.Enemyd1.TabIndex = 9;
@@ -170,7 +172,7 @@
             // Enemyu5
             // 
             this.Enemyu5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Enemyu5.Location = new System.Drawing.Point(216, 182);
+            this.Enemyu5.Location = new System.Drawing.Point(193, 277);
             this.Enemyu5.Name = "Enemyu5";
             this.Enemyu5.Size = new System.Drawing.Size(31, 50);
             this.Enemyu5.TabIndex = 10;
@@ -179,7 +181,7 @@
             // Enemyd5
             // 
             this.Enemyd5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyd5.Location = new System.Drawing.Point(147, 231);
+            this.Enemyd5.Location = new System.Drawing.Point(128, 353);
             this.Enemyd5.Name = "Enemyd5";
             this.Enemyd5.Size = new System.Drawing.Size(31, 50);
             this.Enemyd5.TabIndex = 11;
@@ -188,7 +190,7 @@
             // Enemyd3
             // 
             this.Enemyd3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyd3.Location = new System.Drawing.Point(329, 180);
+            this.Enemyd3.Location = new System.Drawing.Point(329, 224);
             this.Enemyd3.Name = "Enemyd3";
             this.Enemyd3.Size = new System.Drawing.Size(31, 50);
             this.Enemyd3.TabIndex = 12;
@@ -197,7 +199,7 @@
             // Enemyd2
             // 
             this.Enemyd2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyd2.Location = new System.Drawing.Point(338, 59);
+            this.Enemyd2.Location = new System.Drawing.Point(357, 137);
             this.Enemyd2.Name = "Enemyd2";
             this.Enemyd2.Size = new System.Drawing.Size(31, 50);
             this.Enemyd2.TabIndex = 13;
@@ -206,7 +208,7 @@
             // Enemyd4
             // 
             this.Enemyd4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyd4.Location = new System.Drawing.Point(276, 293);
+            this.Enemyd4.Location = new System.Drawing.Point(290, 343);
             this.Enemyd4.Name = "Enemyd4";
             this.Enemyd4.Size = new System.Drawing.Size(31, 50);
             this.Enemyd4.TabIndex = 14;
@@ -215,7 +217,7 @@
             // Enemyu6
             // 
             this.Enemyu6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyu6.Location = new System.Drawing.Point(239, 59);
+            this.Enemyu6.Location = new System.Drawing.Point(239, 159);
             this.Enemyu6.Name = "Enemyu6";
             this.Enemyu6.Size = new System.Drawing.Size(31, 50);
             this.Enemyu6.TabIndex = 15;
@@ -224,7 +226,7 @@
             // Enemyd6
             // 
             this.Enemyd6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Enemyd6.Location = new System.Drawing.Point(128, 77);
+            this.Enemyd6.Location = new System.Drawing.Point(128, 169);
             this.Enemyd6.Name = "Enemyd6";
             this.Enemyd6.Size = new System.Drawing.Size(31, 50);
             this.Enemyd6.TabIndex = 16;
@@ -233,7 +235,7 @@
             // EnemyL1
             // 
             this.EnemyL1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.EnemyL1.Location = new System.Drawing.Point(12, 302);
+            this.EnemyL1.Location = new System.Drawing.Point(12, 343);
             this.EnemyL1.Name = "EnemyL1";
             this.EnemyL1.Size = new System.Drawing.Size(57, 34);
             this.EnemyL1.TabIndex = 17;
@@ -242,7 +244,7 @@
             // EnemyR1
             // 
             this.EnemyR1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.EnemyR1.Location = new System.Drawing.Point(538, 99);
+            this.EnemyR1.Location = new System.Drawing.Point(569, 159);
             this.EnemyR1.Name = "EnemyR1";
             this.EnemyR1.Size = new System.Drawing.Size(54, 28);
             this.EnemyR1.TabIndex = 18;
@@ -252,7 +254,7 @@
             // 
             this.Player.BackColor = System.Drawing.Color.Red;
             this.Player.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Player.Location = new System.Drawing.Point(569, 197);
+            this.Player.Location = new System.Drawing.Point(615, 240);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(23, 24);
             this.Player.TabIndex = 19;
@@ -264,7 +266,7 @@
             this.End.BackColor = System.Drawing.Color.Transparent;
             this.End.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.End.ForeColor = System.Drawing.Color.DarkRed;
-            this.End.Location = new System.Drawing.Point(234, 131);
+            this.End.Location = new System.Drawing.Point(251, 179);
             this.End.Name = "End";
             this.End.Size = new System.Drawing.Size(154, 30);
             this.End.TabIndex = 20;
@@ -287,11 +289,11 @@
             // 
             this.Winning.AutoSize = true;
             this.Winning.BackColor = System.Drawing.Color.Transparent;
-            this.Winning.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Winning.Font = new System.Drawing.Font("Showcard Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Winning.ForeColor = System.Drawing.Color.DarkRed;
-            this.Winning.Location = new System.Drawing.Point(271, 165);
+            this.Winning.Location = new System.Drawing.Point(219, 200);
             this.Winning.Name = "Winning";
-            this.Winning.Size = new System.Drawing.Size(64, 30);
+            this.Winning.Size = new System.Drawing.Size(245, 119);
             this.Winning.TabIndex = 22;
             this.Winning.Text = "WIN";
             // 
@@ -344,7 +346,7 @@
             this.Gold3.BackColor = System.Drawing.Color.Gold;
             this.Gold3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold3.Location = new System.Drawing.Point(428, 94);
+            this.Gold3.Location = new System.Drawing.Point(433, 131);
             this.Gold3.Name = "Gold3";
             this.Gold3.Size = new System.Drawing.Size(15, 15);
             this.Gold3.TabIndex = 27;
@@ -355,7 +357,7 @@
             this.Gold5.BackColor = System.Drawing.Color.Gold;
             this.Gold5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold5.Location = new System.Drawing.Point(204, 46);
+            this.Gold5.Location = new System.Drawing.Point(144, 262);
             this.Gold5.Name = "Gold5";
             this.Gold5.Size = new System.Drawing.Size(15, 15);
             this.Gold5.TabIndex = 28;
@@ -366,7 +368,7 @@
             this.Gold4.BackColor = System.Drawing.Color.Gold;
             this.Gold4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold4.Location = new System.Drawing.Point(193, 249);
+            this.Gold4.Location = new System.Drawing.Point(193, 362);
             this.Gold4.Name = "Gold4";
             this.Gold4.Size = new System.Drawing.Size(15, 15);
             this.Gold4.TabIndex = 29;
@@ -379,7 +381,7 @@
             this.Points.BackColor = System.Drawing.Color.DimGray;
             this.Points.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Points.ForeColor = System.Drawing.Color.Black;
-            this.Points.Location = new System.Drawing.Point(4, 406);
+            this.Points.Location = new System.Drawing.Point(12, 36);
             this.Points.Name = "Points";
             this.Points.Size = new System.Drawing.Size(65, 16);
             this.Points.TabIndex = 30;
@@ -388,9 +390,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.DimGray;
-            this.pictureBox1.Location = new System.Drawing.Point(-8, 393);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 426);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(635, 56);
+            this.pictureBox1.Size = new System.Drawing.Size(650, 55);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
@@ -399,7 +401,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.DimGray;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(273, 400);
+            this.label2.Location = new System.Drawing.Point(12, 447);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 13);
             this.label2.TabIndex = 33;
@@ -410,7 +412,7 @@
             this.labelRetry.AutoSize = true;
             this.labelRetry.BackColor = System.Drawing.Color.DimGray;
             this.labelRetry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRetry.Location = new System.Drawing.Point(259, 244);
+            this.labelRetry.Location = new System.Drawing.Point(267, 277);
             this.labelRetry.Name = "labelRetry";
             this.labelRetry.Size = new System.Drawing.Size(110, 13);
             this.labelRetry.TabIndex = 31;
@@ -421,7 +423,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.DimGray;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(273, 426);
+            this.label3.Location = new System.Drawing.Point(287, 447);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(255, 13);
             this.label3.TabIndex = 34;
@@ -429,12 +431,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.spielToolStripMenuItem,
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(614, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(650, 24);
             this.menuStrip1.TabIndex = 35;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -497,22 +500,34 @@
             // 
             this.SpaceSpielraum.BackColor = System.Drawing.Color.Transparent;
             this.SpaceSpielraum.Image = ((System.Drawing.Image)(resources.GetObject("SpaceSpielraum.Image")));
-            this.SpaceSpielraum.Location = new System.Drawing.Point(0, 27);
+            this.SpaceSpielraum.Location = new System.Drawing.Point(0, 70);
             this.SpaceSpielraum.Name = "SpaceSpielraum";
-            this.SpaceSpielraum.Size = new System.Drawing.Size(623, 365);
+            this.SpaceSpielraum.Size = new System.Drawing.Size(666, 363);
             this.SpaceSpielraum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.SpaceSpielraum.TabIndex = 2;
             this.SpaceSpielraum.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.DimGray;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(650, 70);
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
             // 
             // CrossGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 445);
+            this.ClientSize = new System.Drawing.Size(650, 478);
+            this.Controls.Add(this.End);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.Points);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelRetry);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Points);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Gold4);
             this.Controls.Add(this.Gold5);
@@ -523,7 +538,6 @@
             this.Controls.Add(this.Gold7);
             this.Controls.Add(this.Winning);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.End);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.EnemyR1);
             this.Controls.Add(this.EnemyL1);
@@ -542,11 +556,11 @@
             this.Controls.Add(this.Save1);
             this.Controls.Add(this.picBoxSave2);
             this.Controls.Add(this.SpaceSpielraum);
-            this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "CrossGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrossGame";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CrossGame_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSave2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Save1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemyu1)).EndInit();
@@ -575,6 +589,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpaceSpielraum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,5 +641,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem überUnsToolStripMenuItem;
         private System.Windows.Forms.PictureBox SpaceSpielraum;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -15,7 +15,6 @@ namespace Spielesammlung
         public CrossGame()
         {
             InitializeComponent();
-            InitializeComponent();
             End.Visible = false;  // Game over Label zu beginn unsichtbar
             Winning.Visible = false;  // Win Label zu beginn unsichtbar 
             labelRetry.Visible = false;
@@ -39,6 +38,7 @@ namespace Spielesammlung
 
             }
         }
+
         void GameOver()
         {
 
@@ -162,8 +162,8 @@ namespace Spielesammlung
         private void GameReset()
         {
 
-            Player.Top = 137;
-            Player.Left = 576;
+            Player.Top = 240;
+            Player.Left = 615;
             Points.Text = "score: 0";
             Gold1.Visible = true;
             Gold2.Visible = true;
@@ -174,68 +174,70 @@ namespace Spielesammlung
             Gold7.Visible = true;
         }
 
+       
         void Enemy(int Speed)
         {
-            if (Enemyd1.Top >= 365)
-            { Enemyd1.Top = 0; }
+            if (Enemyd1.Top >= 426)
+            { Enemyd1.Top = 27; }
             else { Enemyd1.Top += Speed; }
 
-            if (Enemyd2.Top >= 365)
-            { Enemyd2.Top = 0; }
+            if (Enemyd2.Top >= 426)
+            { Enemyd2.Top = 27; }
             else { Enemyd2.Top += Speed; }
 
-            if (Enemyd3.Top >= 365)
-            { Enemyd3.Top = 0; }
+            if (Enemyd3.Top >= 426)
+            { Enemyd3.Top = 27; }
             else { Enemyd3.Top += Speed; }
 
-            if (Enemyd4.Top >= 365)
-            { Enemyd4.Top = 0; }
+            if (Enemyd4.Top >= 426)
+            { Enemyd4.Top = 27; }
             else { Enemyd4.Top += Speed; }
 
-            if (Enemyd5.Top >= 365)                           //Enemys going down
-            { Enemyd5.Top = 0; }
+            if (Enemyd5.Top >= 426)                           //Enemys going down
+            { Enemyd5.Top = 27; }
             else { Enemyd5.Top += Speed; }
 
-            if (Enemyd6.Top >= 365)
-            { Enemyd6.Top = 0; }
+            if (Enemyd6.Top >= 426)
+            { Enemyd6.Top = 27; }
             else { Enemyd6.Top += Speed; }
 
 
 
-            if (Enemyu1.Bottom <= 0)
-            { Enemyu1.Top = 365; }
+            if (Enemyu1.Bottom <= 27)
+            { Enemyu1.Top = 426; }
             else { Enemyu1.Top -= Speed; }
 
-            if (Enemyu2.Bottom <= 0)
-            { Enemyu2.Top = 365; }
+            if (Enemyu2.Bottom <= 27)
+            { Enemyu2.Top = 426; }
             else { Enemyu2.Top -= Speed; }
 
-            if (Enemyu3.Bottom <= 0)
-            { Enemyu3.Top = 365; }                           //Enemys going up
+            if (Enemyu3.Bottom <= 27)
+            { Enemyu3.Top = 426; }                           //Enemys going up
             else { Enemyu3.Top -= Speed; }
 
-            if (Enemyu4.Bottom <= 0)
-            { Enemyu4.Top = 365; }
+            if (Enemyu4.Bottom <= 27)
+            { Enemyu4.Top = 426; }
             else { Enemyu4.Top -= Speed; }
 
-            if (Enemyu5.Bottom <= 0)
-            { Enemyu5.Top = 365; }
+            if (Enemyu5.Bottom <= 27)
+            { Enemyu5.Top = 426; }
             else { Enemyu5.Top -= Speed; }
 
-            if (Enemyu6.Bottom <= 0)
-            { Enemyu6.Top = 365; }
+            if (Enemyu6.Bottom <= 27)
+            { Enemyu6.Top = 426; }
             else { Enemyu6.Top -= Speed; }
 
 
-            if (EnemyL1.Left >= 623)
+            if (EnemyL1.Left >= 666)
             { EnemyL1.Left = 0; }
             else { EnemyL1.Left += Speed; }         // Enemys going sideways 
 
             if (EnemyR1.Left <= 0)
-            { EnemyR1.Left = 623; }
+            { EnemyR1.Left = 666; }
             else { EnemyR1.Left -= Speed; }
         }
         int Goldworth = 10;
+
         void Score()
         {
             if (Player.Bounds.IntersectsWith(Gold1.Bounds))
@@ -287,8 +289,21 @@ namespace Spielesammlung
             }
         }
 
-        int gamespeed = 20;
-        private void Form2_KeyDown(object sender, KeyEventArgs e)             // Abfrage ob Taste gedrückt
+        
+      
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Enemy(10);
+            GameOver();
+            Sieg();
+            Score();
+
+        }
+
+
+int gamespeed = 20;
+        private void CrossGame_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)                  // Tastencode gleich Pfeiltaste Links
             {
@@ -297,18 +312,18 @@ namespace Spielesammlung
             }
             if (e.KeyCode == Keys.Right)                 // Tastencode gleich Pfeiltaste Rechts
             {
-                if (Player.Right < 610)
+                if (Player.Right < 666)
                     Player.Left += gamespeed;
             }
 
             if (e.KeyCode == Keys.Up)                    // Tastencode gleich Pfeiltaste Oben
             {
-                if (Player.Top > 0)
+                if (Player.Top > 70)
                     Player.Top += -gamespeed;
             }
             if (e.KeyCode == Keys.Down)                    // Tastencode gleich Pfeiltaste Unten
             {
-                if (Player.Bottom < 333)
+                if (Player.Bottom < 416)
                     Player.Top += gamespeed;
             }
 
@@ -345,15 +360,6 @@ namespace Spielesammlung
                 }
 
             }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            Enemy(10);
-            GameOver();
-            Sieg();
-            Score();
-
         }
 
     }
