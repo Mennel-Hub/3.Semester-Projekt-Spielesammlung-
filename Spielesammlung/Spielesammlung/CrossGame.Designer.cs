@@ -266,7 +266,7 @@
             this.End.BackColor = System.Drawing.Color.Transparent;
             this.End.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.End.ForeColor = System.Drawing.Color.DarkRed;
-            this.End.Location = new System.Drawing.Point(251, 179);
+            this.End.Location = new System.Drawing.Point(259, 224);
             this.End.Name = "End";
             this.End.Size = new System.Drawing.Size(154, 30);
             this.End.TabIndex = 20;
@@ -291,7 +291,7 @@
             this.Winning.BackColor = System.Drawing.Color.Transparent;
             this.Winning.Font = new System.Drawing.Font("Showcard Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Winning.ForeColor = System.Drawing.Color.DarkRed;
-            this.Winning.Location = new System.Drawing.Point(219, 179);
+            this.Winning.Location = new System.Drawing.Point(219, 176);
             this.Winning.Name = "Winning";
             this.Winning.Size = new System.Drawing.Size(245, 119);
             this.Winning.TabIndex = 22;
@@ -307,50 +307,57 @@
             this.Gold7.Size = new System.Drawing.Size(15, 15);
             this.Gold7.TabIndex = 23;
             this.Gold7.TabStop = false;
+            this.Gold7.Tag = "object";
             // 
             // Gold6
             // 
             this.Gold6.BackColor = System.Drawing.Color.Gold;
             this.Gold6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold6.Location = new System.Drawing.Point(345, 293);
+            this.Gold6.Location = new System.Drawing.Point(214, 362);
             this.Gold6.Name = "Gold6";
             this.Gold6.Size = new System.Drawing.Size(15, 15);
             this.Gold6.TabIndex = 24;
             this.Gold6.TabStop = false;
+            this.Gold6.Tag = "object";
             // 
             // Gold1
             // 
             this.Gold1.BackColor = System.Drawing.Color.Gold;
             this.Gold1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold1.Location = new System.Drawing.Point(290, 182);
+            this.Gold1.Location = new System.Drawing.Point(476, 296);
             this.Gold1.Name = "Gold1";
             this.Gold1.Size = new System.Drawing.Size(15, 15);
             this.Gold1.TabIndex = 25;
             this.Gold1.TabStop = false;
+            this.Gold1.Tag = "object";
             // 
             // Gold2
             // 
             this.Gold2.BackColor = System.Drawing.Color.Gold;
             this.Gold2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold2.Location = new System.Drawing.Point(476, 312);
+            this.Gold2.Location = new System.Drawing.Point(433, 137);
+            this.Gold2.Margin = new System.Windows.Forms.Padding(0);
             this.Gold2.Name = "Gold2";
+            this.Gold2.Padding = new System.Windows.Forms.Padding(3);
             this.Gold2.Size = new System.Drawing.Size(15, 15);
             this.Gold2.TabIndex = 26;
             this.Gold2.TabStop = false;
+            this.Gold2.Tag = "object";
             // 
             // Gold3
             // 
             this.Gold3.BackColor = System.Drawing.Color.Gold;
             this.Gold3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold3.Location = new System.Drawing.Point(433, 131);
+            this.Gold3.Location = new System.Drawing.Point(306, 172);
             this.Gold3.Name = "Gold3";
             this.Gold3.Size = new System.Drawing.Size(15, 15);
             this.Gold3.TabIndex = 27;
             this.Gold3.TabStop = false;
+            this.Gold3.Tag = "object";
             // 
             // Gold5
             // 
@@ -362,17 +369,19 @@
             this.Gold5.Size = new System.Drawing.Size(15, 15);
             this.Gold5.TabIndex = 28;
             this.Gold5.TabStop = false;
+            this.Gold5.Tag = "object";
             // 
             // Gold4
             // 
             this.Gold4.BackColor = System.Drawing.Color.Gold;
             this.Gold4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold4.Location = new System.Drawing.Point(193, 362);
+            this.Gold4.Location = new System.Drawing.Point(345, 280);
             this.Gold4.Name = "Gold4";
             this.Gold4.Size = new System.Drawing.Size(15, 15);
             this.Gold4.TabIndex = 29;
             this.Gold4.TabStop = false;
+            this.Gold4.Tag = "object";
             // 
             // Points
             // 
@@ -495,7 +504,7 @@
             // überUnsToolStripMenuItem
             // 
             this.überUnsToolStripMenuItem.Name = "überUnsToolStripMenuItem";
-            this.überUnsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.überUnsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.überUnsToolStripMenuItem.Text = "Über uns";
             // 
             // SpaceSpielraum
@@ -565,6 +574,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrossGame";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CrossGame_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CrossGame_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Save2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Save1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemyu1)).EndInit();
