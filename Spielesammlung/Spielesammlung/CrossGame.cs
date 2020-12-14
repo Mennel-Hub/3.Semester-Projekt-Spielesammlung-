@@ -31,7 +31,7 @@ namespace Spielesammlung
             
             if (Player.Bounds.IntersectsWith(Save2.Bounds))
             {
-                if (Goldworth <10)
+                if (Goldworth <3)
                 {
                     Winning.Visible = false;
                 }
@@ -252,26 +252,23 @@ namespace Spielesammlung
         int Goldworth = 0;
         void Score()
         {
-
             foreach( Control x in this.Controls)
             {
                 if (x is PictureBox && ( string) x.Tag == "object" )
                 {
-                    try
-                    {
-                        if (Player.Bounds.IntersectsWith(x.Bounds))
+                    
+                       if (Player.Bounds.IntersectsWith(x.Bounds)&& x.Visible == Visible)
                         {
 
 
                             Points.Text = "score: 0" + Goldworth.ToString();
-
+                            Goldworth++; 
+                         
 
                         }
-                    }
-                    catch
-                    {
+                   
                         
-                    }
+                   
                 }
             }
             if (Player.Bounds.IntersectsWith(Gold1.Bounds))
