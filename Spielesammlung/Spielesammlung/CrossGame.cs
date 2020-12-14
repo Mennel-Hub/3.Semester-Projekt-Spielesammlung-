@@ -25,7 +25,7 @@ namespace Spielesammlung
             labelRetry.Visible = false;    //Retry Label zu beginn unsichtbar 
             Save1.Visible = true;        //Methode des GameReset immer vorhanden damit jederzeit resetet werden kann
             lblmax.Visible = false;
-            
+           
         }
        
         void Sieg()
@@ -37,7 +37,7 @@ namespace Spielesammlung
                 {
                     Winning.Visible = false;
                 }
-                if (Goldworth >6)
+                if (Goldworth >=7)
                 {
                 
                     lblmax.Visible = true;
@@ -350,7 +350,7 @@ namespace Spielesammlung
             }
 
 
-
+            
         
 
 
@@ -363,7 +363,8 @@ namespace Spielesammlung
         }
 
 
-
+        
+        
 
         private void CrossGame_KeyUp(object sender, KeyEventArgs e)
         {
@@ -386,7 +387,7 @@ namespace Spielesammlung
             }
         }
 
-        
+       
 
         private void CrossGame_KeyDown(object sender, KeyEventArgs e)
         {
@@ -416,7 +417,7 @@ namespace Spielesammlung
 
 
 
-                if (End.Visible || Winning.Visible == true)  // Falls  Win- oder Gameover-Sequenz eintritt und Entertaste gedrückt wird tritt folgendes ein
+                if (End.Visible || Winning.Visible ||lblmax.Visible == true)  // Falls  Win- oder Gameover-Sequenz eintritt und Entertaste gedrückt wird tritt folgendes ein
 
                 {
 
@@ -424,6 +425,7 @@ namespace Spielesammlung
                     End.Visible = false;                       // Gameover-Sequenz wird unsichtbar
                     Winning.Visible = false;                   // Gameover-Sequenz wird unsichtbar
                     timer1.Enabled = true;                     // Timer ist true damit sich Gegner weiter bewegen
+                    lblmax.Visible = false;
                     Player.Visible = true;                     // Der Player ist Sichtbar 
                     labelRetry.Visible = true;                 // Retry label ist sichtbar
 

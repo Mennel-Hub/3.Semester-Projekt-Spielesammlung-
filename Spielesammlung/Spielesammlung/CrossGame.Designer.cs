@@ -265,11 +265,11 @@
             // 
             this.End.AutoSize = true;
             this.End.BackColor = System.Drawing.Color.Transparent;
-            this.End.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.End.ForeColor = System.Drawing.Color.DarkRed;
-            this.End.Location = new System.Drawing.Point(259, 224);
+            this.End.Font = new System.Drawing.Font("Showcard Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.End.ForeColor = System.Drawing.Color.Black;
+            this.End.Location = new System.Drawing.Point(149, 184);
             this.End.Name = "End";
-            this.End.Size = new System.Drawing.Size(154, 30);
+            this.End.Size = new System.Drawing.Size(393, 79);
             this.End.TabIndex = 20;
             this.End.Text = "Game over";
             // 
@@ -291,8 +291,8 @@
             this.Winning.AutoSize = true;
             this.Winning.BackColor = System.Drawing.Color.Transparent;
             this.Winning.Font = new System.Drawing.Font("Showcard Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Winning.ForeColor = System.Drawing.Color.DarkRed;
-            this.Winning.Location = new System.Drawing.Point(219, 176);
+            this.Winning.ForeColor = System.Drawing.Color.Firebrick;
+            this.Winning.Location = new System.Drawing.Point(219, 172);
             this.Winning.Name = "Winning";
             this.Winning.Size = new System.Drawing.Size(245, 119);
             this.Winning.TabIndex = 22;
@@ -420,11 +420,12 @@
             // labelRetry
             // 
             this.labelRetry.AutoSize = true;
-            this.labelRetry.BackColor = System.Drawing.Color.DimGray;
-            this.labelRetry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRetry.Location = new System.Drawing.Point(278, 380);
+            this.labelRetry.BackColor = System.Drawing.Color.Transparent;
+            this.labelRetry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRetry.ForeColor = System.Drawing.Color.Black;
+            this.labelRetry.Location = new System.Drawing.Point(269, 373);
             this.labelRetry.Name = "labelRetry";
-            this.labelRetry.Size = new System.Drawing.Size(110, 13);
+            this.labelRetry.Size = new System.Drawing.Size(156, 20);
             this.labelRetry.TabIndex = 31;
             this.labelRetry.Text = "Retry: Press Enter";
             // 
@@ -544,14 +545,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 478);
-            this.Controls.Add(this.lblmax);
-            this.Controls.Add(this.Winning);
+            this.Controls.Add(this.labelRetry);
             this.Controls.Add(this.End);
+            this.Controls.Add(this.Winning);
+            this.Controls.Add(this.lblmax);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Points);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.labelRetry);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Gold4);
@@ -586,6 +587,7 @@
             this.Name = "CrossGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrossGame";
+            this.Load += new System.EventHandler(this.CrossGame_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CrossGame_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CrossGame_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Save2)).EndInit();
