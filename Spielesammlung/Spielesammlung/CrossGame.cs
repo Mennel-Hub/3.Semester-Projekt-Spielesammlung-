@@ -19,11 +19,13 @@ namespace Spielesammlung
         public CrossGame()
         {
             InitializeComponent();       
+            GameReset();
             End.Visible = false;  // Game over Label zu beginn unsichtbar
             Winning.Visible = false;  // Win Label zu beginn unsichtbar 
             labelRetry.Visible = false;    //Retry Label zu beginn unsichtbar 
-            Save1.Visible = true;        
-            GameReset();          //Methode des GameReset immer vorhanden damit jederzeit resetet werden kann 
+            Save1.Visible = true;        //Methode des GameReset immer vorhanden damit jederzeit resetet werden kann
+            lblmax.Visible = false;
+            
         }
        
         void Sieg()
@@ -34,6 +36,16 @@ namespace Spielesammlung
                 if (Goldworth <3)
                 {
                     Winning.Visible = false;
+                }
+                if (Goldworth >6)
+                {
+                
+                    lblmax.Visible = true;
+                    timer1.Enabled = false;
+                    Winning.Visible = false;
+                    Player.Visible = false;
+                    End.Visible = false;
+                    labelRetry.Visible = true;
                 }
                 else
                 {
@@ -347,7 +359,7 @@ namespace Spielesammlung
             GameOver();
             Sieg();
             Score();
-
+            
         }
 
 
@@ -373,6 +385,8 @@ namespace Spielesammlung
                 moveDown = false;
             }
         }
+
+        
 
         private void CrossGame_KeyDown(object sender, KeyEventArgs e)
         {

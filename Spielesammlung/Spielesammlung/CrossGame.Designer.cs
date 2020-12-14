@@ -74,6 +74,7 @@
             this.überUnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SpaceSpielraum = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblmax = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Save2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Save1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemyu1)).BeginInit();
@@ -421,7 +422,7 @@
             this.labelRetry.AutoSize = true;
             this.labelRetry.BackColor = System.Drawing.Color.DimGray;
             this.labelRetry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRetry.Location = new System.Drawing.Point(278, 298);
+            this.labelRetry.Location = new System.Drawing.Point(278, 380);
             this.labelRetry.Name = "labelRetry";
             this.labelRetry.Size = new System.Drawing.Size(110, 13);
             this.labelRetry.TabIndex = 31;
@@ -527,11 +528,23 @@
             this.pictureBox2.TabIndex = 36;
             this.pictureBox2.TabStop = false;
             // 
+            // lblmax
+            // 
+            this.lblmax.AutoSize = true;
+            this.lblmax.Font = new System.Drawing.Font("Showcard Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmax.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblmax.Location = new System.Drawing.Point(61, 127);
+            this.lblmax.Name = "lblmax";
+            this.lblmax.Size = new System.Drawing.Size(548, 238);
+            this.lblmax.TabIndex = 37;
+            this.lblmax.Text = "Maximum \r\n     Score";
+            // 
             // CrossGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 478);
+            this.Controls.Add(this.lblmax);
             this.Controls.Add(this.Winning);
             this.Controls.Add(this.End);
             this.Controls.Add(this.menuStrip1);
@@ -656,5 +669,6 @@
         private System.Windows.Forms.ToolStripMenuItem überUnsToolStripMenuItem;
         private System.Windows.Forms.PictureBox SpaceSpielraum;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblmax;
     }
 }
