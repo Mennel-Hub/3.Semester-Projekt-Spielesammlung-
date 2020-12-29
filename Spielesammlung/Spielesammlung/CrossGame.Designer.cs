@@ -267,7 +267,7 @@
             this.End.BackColor = System.Drawing.Color.Transparent;
             this.End.Font = new System.Drawing.Font("Showcard Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.End.ForeColor = System.Drawing.Color.Black;
-            this.End.Location = new System.Drawing.Point(149, 184);
+            this.End.Location = new System.Drawing.Point(149, 212);
             this.End.Name = "End";
             this.End.Size = new System.Drawing.Size(393, 79);
             this.End.TabIndex = 20;
@@ -292,7 +292,7 @@
             this.Winning.BackColor = System.Drawing.Color.Transparent;
             this.Winning.Font = new System.Drawing.Font("Showcard Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Winning.ForeColor = System.Drawing.Color.Firebrick;
-            this.Winning.Location = new System.Drawing.Point(219, 172);
+            this.Winning.Location = new System.Drawing.Point(206, 190);
             this.Winning.Name = "Winning";
             this.Winning.Size = new System.Drawing.Size(245, 119);
             this.Winning.TabIndex = 22;
@@ -303,7 +303,7 @@
             this.Gold7.BackColor = System.Drawing.Color.Gold;
             this.Gold7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold7.Location = new System.Drawing.Point(128, 159);
+            this.Gold7.Location = new System.Drawing.Point(255, 225);
             this.Gold7.Name = "Gold7";
             this.Gold7.Size = new System.Drawing.Size(15, 15);
             this.Gold7.TabIndex = 23;
@@ -315,7 +315,7 @@
             this.Gold6.BackColor = System.Drawing.Color.Gold;
             this.Gold6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold6.Location = new System.Drawing.Point(214, 362);
+            this.Gold6.Location = new System.Drawing.Point(193, 362);
             this.Gold6.Name = "Gold6";
             this.Gold6.Size = new System.Drawing.Size(15, 15);
             this.Gold6.TabIndex = 24;
@@ -327,7 +327,7 @@
             this.Gold1.BackColor = System.Drawing.Color.Gold;
             this.Gold1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold1.Location = new System.Drawing.Point(476, 296);
+            this.Gold1.Location = new System.Drawing.Point(329, 396);
             this.Gold1.Name = "Gold1";
             this.Gold1.Size = new System.Drawing.Size(15, 15);
             this.Gold1.TabIndex = 25;
@@ -339,7 +339,7 @@
             this.Gold2.BackColor = System.Drawing.Color.Gold;
             this.Gold2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold2.Location = new System.Drawing.Point(433, 137);
+            this.Gold2.Location = new System.Drawing.Point(465, 249);
             this.Gold2.Margin = new System.Windows.Forms.Padding(0);
             this.Gold2.Name = "Gold2";
             this.Gold2.Padding = new System.Windows.Forms.Padding(3);
@@ -353,7 +353,7 @@
             this.Gold3.BackColor = System.Drawing.Color.Gold;
             this.Gold3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold3.Location = new System.Drawing.Point(306, 172);
+            this.Gold3.Location = new System.Drawing.Point(255, 88);
             this.Gold3.Name = "Gold3";
             this.Gold3.Size = new System.Drawing.Size(15, 15);
             this.Gold3.TabIndex = 27;
@@ -365,7 +365,7 @@
             this.Gold5.BackColor = System.Drawing.Color.Gold;
             this.Gold5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold5.Location = new System.Drawing.Point(144, 262);
+            this.Gold5.Location = new System.Drawing.Point(138, 159);
             this.Gold5.Name = "Gold5";
             this.Gold5.Size = new System.Drawing.Size(15, 15);
             this.Gold5.TabIndex = 28;
@@ -377,7 +377,7 @@
             this.Gold4.BackColor = System.Drawing.Color.Gold;
             this.Gold4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Gold4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gold4.Location = new System.Drawing.Point(345, 280);
+            this.Gold4.Location = new System.Drawing.Point(373, 277);
             this.Gold4.Name = "Gold4";
             this.Gold4.Size = new System.Drawing.Size(15, 15);
             this.Gold4.TabIndex = 29;
@@ -534,7 +534,7 @@
             this.lblmax.AutoSize = true;
             this.lblmax.Font = new System.Drawing.Font("Showcard Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmax.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblmax.Location = new System.Drawing.Point(61, 127);
+            this.lblmax.Location = new System.Drawing.Point(54, 139);
             this.lblmax.Name = "lblmax";
             this.lblmax.Size = new System.Drawing.Size(548, 238);
             this.lblmax.TabIndex = 37;
@@ -587,7 +587,6 @@
             this.Name = "CrossGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrossGame";
-            this.Load += new System.EventHandler(this.CrossGame_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CrossGame_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CrossGame_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Save2)).EndInit();

@@ -12,11 +12,16 @@ namespace Spielesammlung
 {
     public partial class CrossGame : Form               // CrossGame abgeleitet von der Basis Form
     {
-        bool moveLeft, moveRight, moveUp, moveDown;
-        int speed = 15;
+        bool moveLeft, moveRight, moveUp, moveDown;      // boolsche Variablen die benutzt werden, um sich in bestimmte Richtungen zu bewegen
+        int speed = 15;                                  // Variable für die Geschwindigkeit 
+        int Goldworth = 0;                               // Wert der Goldnuggets
 
 
-        public CrossGame()
+        #region
+        /// <summary>
+        /// Basis Konstruktor 
+        /// </summary>
+        public CrossGame()                  // Konstruktor dieser Form
         {
             InitializeComponent();       
             GameReset();
@@ -27,15 +32,27 @@ namespace Spielesammlung
             lblmax.Visible = false;
            
         }
-       
+        #endregion 
+
+        #region
+        /// <summary>
+        /// Methode damit überprüft wird ob der Spieler gewonnen hat oder nicht 
+        /// <para> Solange weniger als 3 Nuggets eingesammelt wurden kann der Spieler nicht gewinnen
+        /// </para>
+        /// </summary>
         void Sieg()
         {
             
             if (Player.Bounds.IntersectsWith(Save2.Bounds))
             {
-                if (Goldworth <3)
+                if (Goldworth <=3)
                 {
                     Winning.Visible = false;
+                    lblmax.Visible = false;
+                    timer1.Enabled = true;
+                    End.Visible = false;
+                    labelRetry.Visible = false;
+                    Player.Visible = true;
                 }
                 if (Goldworth >=7)
                 {
@@ -60,7 +77,16 @@ namespace Spielesammlung
             }
             
         }
+        #endregion
 
+        #region
+        /// <summary>
+        /// Methode zur Bestimmmung des Gameover
+        /// <para> Mittels Kollision der Grenzen 
+        /// <value> Die Eigenschaft Visible sorgt, mittels den boolschen Wert true, dafür ,dass das Label sichtbar wird
+        /// </value>
+        /// </para>
+        /// </summary>
         void GameOver()
         {
 
@@ -178,9 +204,15 @@ namespace Spielesammlung
 
 
         }
+        #endregion
 
-        //  int position;
-
+        #region
+        /// <summary>
+        /// Methode für den Reset 
+        /// <value>
+        /// Alle eingesammelten Nuggets werden wieder sichtbar, zudem ist der score auf 0 
+        /// </value>
+        /// </summary>
         private void GameReset()
         {
             Goldworth = 1;
@@ -195,8 +227,19 @@ namespace Spielesammlung
             Gold6.Visible = true;
             Gold7.Visible = true;
         }
+        #endregion
 
-       
+        #region
+
+        /// <summary>
+        /// Methode, die für die Bewegung der Gegner benutzt wird 
+        /// </summary>
+        /// <value>
+        /// Solange Gegner Grenzen größer, kleiner oder gleich von einer bestimmten Pixelanzahl sind kann ein sogenanntes scrolling hervorgerufen werden
+        /// </value>
+        /// <param name="Speed"> 
+        /// Variable für die Geschwindigkeit
+        /// </param>
         void Enemy(int Speed)
         {
             if (Enemyd1.Top >= 426)
@@ -258,22 +301,28 @@ namespace Spielesammlung
             { EnemyR1.Left = 666; }
             else { EnemyR1.Left -= Speed; }
         }
-       
-      
+        #endregion
+
+        #region
+        /// <summary>
+        /// Methode um den Punktestand zu ermitteln bzw zu erhöhen 
+        /// <value>
+        /// Wenn die jeweilige Picturebox(Goldnugget) berührt wird, wird es unsichtbar
+        /// </value>
+        /// </summary>
         
-        int Goldworth = 0;
         void Score()
         {
-            foreach( Control x in this.Controls)
+            foreach( Control x in this.Controls) // für jedes control(taste gedrückt) in x Richtung
             {
-                if (x is PictureBox && ( string) x.Tag == "object" )
+                if (x is PictureBox && ( string) x.Tag == "object" ) // sofern in diesem x eine Picturebox ist und in dem tag object steht 
                 {
                     
-                       if (Player.Bounds.IntersectsWith(x.Bounds)&& x.Visible == Visible)
+                       if (Player.Bounds.IntersectsWith(x.Bounds)&& x.Visible == Visible) // und wenn der Spieler mit dem x kollidiert
                         {
 
-
-                            Points.Text = "score: 0" + Goldworth.ToString();
+                           // dann soll der Wert der Variable Goldworth inkrementiert werden und zu einem string konvertiert werden
+                            Points.Text = "score: 0" + Goldworth.ToString(); 
                             Goldworth++; 
                          
 
@@ -283,52 +332,58 @@ namespace Spielesammlung
                    
                 }
             }
-            if (Player.Bounds.IntersectsWith(Gold1.Bounds))
+            if (Player.Bounds.IntersectsWith(Gold1.Bounds)) // Wenn Grenzen des Spielers und der goldenen Picturebox(Gold1) kollidieren
             {
-                Gold1.Visible = false;
+                Gold1.Visible = false;                  // dann soll dieses unsichtbar werden 
             }
           
-            if (Player.Bounds.IntersectsWith(Gold2.Bounds))
+            if (Player.Bounds.IntersectsWith(Gold2.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold2) kollidieren
 
             {
-                Gold2.Visible = false;
+                Gold2.Visible = false;                   // dann soll dieses unsichtbar werden 
             }
 
-            if (Player.Bounds.IntersectsWith(Gold3.Bounds))
+            if (Player.Bounds.IntersectsWith(Gold3.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold3) kollidieren
 
             {
-                Gold3.Visible = false;
+                Gold3.Visible = false;                  // dann soll dieses unsichtbar werden 
             }
 
-            if (Player.Bounds.IntersectsWith(Gold4.Bounds))
+            if (Player.Bounds.IntersectsWith(Gold4.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold4) kollidieren
 
             {
-                Gold4.Visible = false;
+                Gold4.Visible = false;                  // dann soll dieses unsichtbar werden 
             }
 
-            if (Player.Bounds.IntersectsWith(Gold5.Bounds))
+            if (Player.Bounds.IntersectsWith(Gold5.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold5) kollidieren
 
             {
-                Gold5.Visible = false;
+                Gold5.Visible = false;                  // dann soll dieses unsichtbar werden 
             }
 
-            if (Player.Bounds.IntersectsWith(Gold6.Bounds))
+            if (Player.Bounds.IntersectsWith(Gold6.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold6) kollidieren
 
             {
-                Gold6.Visible = false;
+                Gold6.Visible = false;                 // dann soll dieses unsichtbar werden 
             }
 
-            if (Player.Bounds.IntersectsWith(Gold7.Bounds))
+            if (Player.Bounds.IntersectsWith(Gold7.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold7) kollidieren
 
             {
 
-                Gold7.Visible = false;
+                Gold7.Visible = false;                  // dann soll dieses unsichtbar werden 
             }
         }
+        #endregion
 
 
+        #region
 
-
+        /// <summary>
+        /// Methode um sich in alle Richtungen zu bewegen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (moveLeft == true && Player.Left > 0)             // BoolVariable ist true und linke grenze von Player gräßer Null 
@@ -362,10 +417,15 @@ namespace Spielesammlung
             
         }
 
+        #endregion
 
-        
-        
 
+        #region
+        /// <summary>
+        /// Methode um fest zu legen was geschieht wenn Pfeiltasten nicht gedrückt sind 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CrossGame_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)                  // Tastencode gleich Pfeiltaste Links
@@ -386,9 +446,15 @@ namespace Spielesammlung
                 moveDown = false;
             }
         }
+        #endregion
 
-       
+        #region
 
+        /// <summary>
+        /// Methode um fest zu legen was geschieht wenn Pfeiltasten oder Entertaste gedrückt sind 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CrossGame_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)                  // Tastencode gleich Pfeiltaste Links
@@ -425,7 +491,7 @@ namespace Spielesammlung
                     End.Visible = false;                       // Gameover-Sequenz wird unsichtbar
                     Winning.Visible = false;                   // Gameover-Sequenz wird unsichtbar
                     timer1.Enabled = true;                     // Timer ist true damit sich Gegner weiter bewegen
-                    lblmax.Visible = false;
+                    lblmax.Visible = false;                    // Maximum score ist unsichtbar
                     Player.Visible = true;                     // Der Player ist Sichtbar 
                     labelRetry.Visible = true;                 // Retry label ist sichtbar
 
@@ -444,15 +510,31 @@ namespace Spielesammlung
 
             }
         }
+        #endregion
 
+        #region
+        /// <summary>
+        /// Methode für ein Untermenü der Hauptmenüleiste an dem oberen Rand des Forms
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void spielVerlassenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close(); // Wenn auf der Grafischen Oberfläche im oberen linken Eck auf Spielverlassen geklickt wird soll sich dieses Fenster schließen
         }
+        #endregion
 
+
+        #region
+        /// <summary>
+        /// Methode für ein Untermenü der Hauptmenüleiste an dem oberen Rand des Forms
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void neuesSpielToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GameReset();  // Wenn auf der Grafischen Oberfläche im oberen linken Eck auf neues Spiel geklickt wird soll sich dieses Fenster reseten
         }
+        #endregion
     }
 }
