@@ -30,7 +30,7 @@ namespace Spielesammlung
             labelRetry.Visible = false;    //Retry Label zu beginn unsichtbar 
             Save1.Visible = true;        //Methode des GameReset immer vorhanden damit jederzeit resetet werden kann
             lblmax.Visible = false;
-           
+            
         }
         #endregion 
 
@@ -45,16 +45,14 @@ namespace Spielesammlung
             
             if (Player.Bounds.IntersectsWith(Save2.Bounds))
             {
-                if (Goldworth <=3)
+                if (Goldworth <=3)                // weder Gewonnen noch Verloren das Spiel geht weiter
                 {
                     Winning.Visible = false;
-                    lblmax.Visible = false;
                     timer1.Enabled = true;
-                    End.Visible = false;
                     labelRetry.Visible = false;
                     Player.Visible = true;
                 }
-                if (Goldworth >=7)
+                if (Goldworth >=7)             // Maximale Punktzahl
                 {
                 
                     lblmax.Visible = true;
@@ -64,13 +62,13 @@ namespace Spielesammlung
                     End.Visible = false;
                     labelRetry.Visible = true;
                 }
-                else
+                if(Goldworth >3 && Goldworth< 7)         // Gewonnen  
                 {
-                            timer1.Enabled = false;
-                            Winning.Visible = true;
-                            Player.Visible = false;
-                            End.Visible = false;
-                            labelRetry.Visible = true;
+                           timer1.Enabled = false;
+                           Winning.Visible = true;
+                           Player.Visible = false;
+                           End.Visible = false;
+                           labelRetry.Visible = true;
                 }
 
 
@@ -395,7 +393,7 @@ namespace Spielesammlung
             {
                 Player.Left += speed;
             }
-            if (moveUp == true && Player.Top > 0)
+            if (moveUp == true && Player.Top > 82)
             {
                 Player.Top -= speed;
             }
